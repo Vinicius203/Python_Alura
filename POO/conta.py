@@ -14,3 +14,10 @@ class Conta:
 
     def saca(self, valor):
         self.saldo -= valor
+
+conta = Conta(123, 'Vinicius', 150.0, 1000)
+conta.extrato()
+conta.saca(15.0)
+conta.extrato()
+conta.deposita(65.0)
+conta.extrato()
