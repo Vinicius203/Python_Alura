@@ -20,7 +20,7 @@ class Programa:
         self._nome = nome
 
     def __str__(self):
-        return f'Nome: {self.nome} Likes: {self.likes}'
+        return f"Nome: {self.nome} Likes: {self.likes}"
 
 
 class Filme(Programa):
@@ -29,7 +29,7 @@ class Filme(Programa):
         self.duracao = duracao
 
     def __str__(self):
-        return f'Nome: {self.nome} - {self.duracao} min - Likes: {self.likes}'
+        return f"Nome: {self.nome} - {self.duracao} min - Likes: {self.likes}"
 
 
 class Serie(Programa):
@@ -38,10 +38,10 @@ class Serie(Programa):
         self.temporadas = temporadas
 
     def __str__(self):
-        return f'Nome: {self.nome} - {self.temporadas} temporadas - Likes: {self.likes}'
+        return f"Nome: {self.nome} - {self.temporadas} temporadas - Likes: {self.likes}"
 
 
-class Playlist():
+class Playlist:
     def __init__(self, nome, programas):
         self.nome = nome
         self._programas = programas
@@ -53,10 +53,10 @@ class Playlist():
         return len(self._programas)
 
 
-vingadores = Filme('vingadores - guerra infinita', 2018, 160)
-atlanta = Serie('atlanta', 2018, 2)
-tmep = Filme('todo mundo em panico', 1999, 100)
-demolidor = Serie('demolidor', 2016, 2)
+vingadores = Filme("vingadores - guerra infinita", 2018, 160)
+atlanta = Serie("atlanta", 2018, 2)
+tmep = Filme("todo mundo em panico", 1999, 100)
+demolidor = Serie("demolidor", 2016, 2)
 
 vingadores.dar_likes()
 vingadores.dar_likes()
@@ -69,9 +69,9 @@ demolidor.dar_likes()
 demolidor.dar_likes()
 
 listinha = [atlanta, vingadores, demolidor, tmep]
-minha_playlist = Playlist('fim de semana', listinha)
+minha_playlist = Playlist("fim de semana", listinha)
 
 for programa in minha_playlist:
     print(programa)
 
-print(f'Tamanho: {len(minha_playlist)}')
+print(f"Tamanho: {len(minha_playlist)}")
