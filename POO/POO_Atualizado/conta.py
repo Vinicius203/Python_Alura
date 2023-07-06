@@ -1,5 +1,5 @@
 class Conta:
-    def __init__(self, numero, titular, saldo, limite):
+    def __init__(self, numero, titular, saldo, limite, codigo_banco):
         self.__numero = numero
         self.__titular = titular
         self.__saldo = saldo
@@ -12,30 +12,53 @@ class Conta:
         self.__saldo += valor
 
     def saca(self, valor):
-        if valor <= self.__saldo:
+        if self.__possibilidade_saque(valor):
             self.__saldo -= valor
         else:
             print(
-                "O valor de saque é maior do que o saldo!"
+                "O valor de saque é maior do que o limite!"
                 " A operação não foi realizada."
             )
+
+    def __possibilidade_saque(self, valor_saque):
+        valor_maximo = self.__saldo + self.__limite
+        return valor_saque <= valor_maximo
 
     def transfere(self, valor, destino):
         self.saca(valor)
         destino.deposita(valor)
 
-    def get_titular(self):
+    @property
+    def titular(self):
         return self.__titular
 
-    def get_saldo(self):
+    @property
+    def saldo(self):
         return self.__saldo
 
-    def get_limite(self):
+    @property
+    def limite(self):
         return self.__limite
 
-    def set_limite(self, limite):
+    @staticmethod
+    def codigo_banco():
+        return "001"
+
+    @staticmethod
+    def codigos_bancos():
+        return {"BB": "001", "Caixa": "104", "Bradesco": "237"}
+
+    @limite.setter
+    def limite(self, limite):
         self.__limite = limite
 
 
-conta = Conta(123, "Vinicius", 15.70, 1130)
-conta2 = Conta(210, "Aragorn", 761.92, 3200)
+print(Conta.codigo_banco())
+print(Conta.codigos_bancos())
+
+conta = Conta(123, "Vinicius", 15.70, 1130, "001")
+conta2 = Conta(210, "Aragorn", 761.92, 3200, "001")
+
+conta.extrato()
+conta.saca(1145.70)
+conta.extrato()
