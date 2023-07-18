@@ -8,3 +8,7 @@ POO_2/tempCodeRunnerFile.py
 brasilidades/__pycache__/cpf.cpython-311.pyc
 brasilidades/__pycache__/cpf_cnpj.cpython-311.pyc
 .vscode/settings.json
+brasilidades/__pycache__/cpf_cnpj.cpython-310.pyc
+.gitignore
+brasilidades/__pycache__/telefones.cpython-310.pyc
+brasilidades/__pycache__/datas.cpython-310.pyc
