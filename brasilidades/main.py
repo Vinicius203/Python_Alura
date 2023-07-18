@@ -1,4 +1,5 @@
 # Aqui se tem os testes para o código de validação de CPF e CNPJ
+
 """
 from cpf_cnpj import Documento
 
@@ -11,6 +12,10 @@ documento_cpf = Documento.cria_documento(exemplo_cpf)
 print(documento_cpf)
 """
 
+
+# Aqui se tem a explicação de como o RegEx funciona
+
+"""
 import re
 
 # O colchetes denomina o intervalo e as chaves a quantidade
@@ -25,3 +30,27 @@ texto2 = "vini12@hotmail.com"
 
 resposta2 = re.search(padrao2, texto2)
 print(resposta2.group())
+"""
+
+
+# Aqui se tem o código para o arquivo de telefone
+
+"""
+from telefones import Telefones
+import re
+
+telefone = "552126481234"
+telefone_objeto = Telefones(telefone)
+
+# padrao = "([0-9]{2,3})?([0-9]{2})([0-9]{4,5})([0-9]{4})"
+# resposta = re.search(padrao,telefone)
+# print(resposta.group())
+
+print(telefone_objeto)
+"""
+
+from datetime import datetime, timedelta
+from datas import Datas
+
+cadastro = Datas()
+print(cadastro)
