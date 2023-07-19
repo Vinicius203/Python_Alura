@@ -12,3 +12,4 @@ brasilidades/__pycache__/cpf_cnpj.cpython-310.pyc
 .gitignore
 brasilidades/__pycache__/telefones.cpython-310.pyc
 brasilidades/__pycache__/datas.cpython-310.pyc
+venv/
