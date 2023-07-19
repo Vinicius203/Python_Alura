@@ -49,8 +49,23 @@ telefone_objeto = Telefones(telefone)
 print(telefone_objeto)
 """
 
+# Aqui se tem o código para o arquivo de datas
+"""
 from datetime import datetime, timedelta
 from datas import Datas
 
 cadastro = Datas()
 print(cadastro)
+
+hoje = Datas()
+print(hoje.tempo_cadastro())
+"""
+
+import requests
+from acesso_cep import BuscaEndereco
+
+cep = 25870146
+teste_cep = BuscaEndereco(cep)
+
+r = requests.get("viacep.com.br/ws/01001000/json/")
+print(r.text)
