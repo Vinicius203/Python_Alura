@@ -64,8 +64,5 @@ print(hoje.tempo_cadastro())
 import requests
 from acesso_cep import BuscaEndereco
 
-cep = 25870146
-teste_cep = BuscaEndereco(cep)
-
-r = requests.get("viacep.com.br/ws/01001000/json/")
+r = requests.get("https://viacep.com.br/ws/37890000/json/")
 print(r.text)
