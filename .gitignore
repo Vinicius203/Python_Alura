@@ -1,7 +1,6 @@
 jogos/__pycache__/adivinhacao.cpython-310.pyc
 jogos/__pycache__/forca.cpython-310.pyc
 Básico/jogos/__pycache__/adivinhacao.cpython-310.pyc
-.gitignore
 Básico/jogos/__pycache__/forca.cpython-310.pyc
 POO/__pycache__/conta.cpython-310.pyc
 POO_2/tempCodeRunnerFile.py
@@ -9,11 +8,11 @@ brasilidades/__pycache__/cpf.cpython-311.pyc
 brasilidades/__pycache__/cpf_cnpj.cpython-311.pyc
 .vscode/settings.json
 brasilidades/__pycache__/cpf_cnpj.cpython-310.pyc
-.gitignore
 brasilidades/__pycache__/telefones.cpython-310.pyc
 brasilidades/__pycache__/datas.cpython-310.pyc
-venv/
 brasilidades/__pycache__/acesso_cep.cpython-310.pyc
 brasilidades/tempCodeRunnerFile.py
-.gitignore
 brasilidades/__pycache__/acesso_cep.cpython-310.pyc
+POO_2/testes/__pycache__/bytebank.cpython-310.pyc
+requirements.txt
+venv/
