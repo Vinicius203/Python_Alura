@@ -17,3 +17,7 @@ POO_2/testes/__pycache__/bytebank.cpython-310.pyc
 requirements.txt
 .vscode/
 venv/
+POO_2/bytebank-tdd/__pycache__/
+POO_2/bytebank-tdd/codigo/__pycache__/
+POO_2/bytebank-tdd/tests/__pycache__/
+POO_2/bytebank-tdd/tests/tempCodeRunnerFile.py
