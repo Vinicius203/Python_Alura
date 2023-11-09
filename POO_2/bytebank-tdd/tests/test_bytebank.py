@@ -6,6 +6,8 @@ current_dir = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.join(current_dir, "../codigo"))
 
 from bytebank import Funcionario
+import pytest
+from pytest import mark
 
 
 class TestClass:
@@ -37,6 +39,27 @@ class TestClass:
         funcionario_teste = Funcionario(entrada_nome, "05/09/2001", entrada)
 
         funcionario_teste.decrescimo_salario()  # When (Ação)
-        resultado = funcionario_teste.salario()
+        resultado = funcionario_teste.salario
 
         assert resultado == esperado  # Then (Desfecho)
+
+    @mark.calcular_bonus
+    def test_quando_calcular_bonus_recebe_1000_deve_retornar_100(self):
+        entrada = 1000  # Given (Contexto)
+        esperado = 100
+
+        funcionario_teste = Funcionario("teste", "05/09/2001", entrada)
+
+        resultado = funcionario_teste.calcular_bonus()  # When (Ação)
+
+        assert resultado == esperado  # Then (Desfecho)
+
+    @mark.calcular_bonus
+    def test_quando_calcular_bonus_recebe_1000000_deve_retornar_exception(self):
+        with pytest.raises(Exception):
+            entrada = 1000000  # Given (Contexto)
+
+            funcionario_teste = Funcionario("teste", "05/09/2001", entrada)
+            resultado = funcionario_teste.calcular_bonus()  # When (Ação)
+
+            assert resultado  # Then (Desfecho)
